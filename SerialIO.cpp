@@ -40,15 +40,6 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
         return 0;
     }
 
-    /*
-    // Write to title out to serial port.
-    if (!WriteFile(hSerial, cBuffer_out, strlen(cBuffer_out), &cBytes_out, NULL)) {
-        printf("file write errors\n");
-        Sleep(4000);
-        return 0;
-    }
-    */
-
     // Set Communication event mask for WaitCommEvent for rxchar (recieve character) in buffer
     SetCommMask(hSerial, EV_RXCHAR | EV_ERR);
 
